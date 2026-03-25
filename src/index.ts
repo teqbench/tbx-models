@@ -1,2 +1,1 @@
-// TODO: Replace with your package's public API exports
-export { greet } from './greet';
+export type { BaseModel } from './base-model';

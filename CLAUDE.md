@@ -4,9 +4,7 @@ This file provides guidance for Claude Code when working in this repository.
 
 ## Package Overview
 
-<!-- TODO: Describe what this package does and its primary use case -->
-
-This is a `@teqbench` npm package built with TypeScript.
+This package provides TypeScript domain model interfaces for the TeqBench application framework. The primary export is `BaseModel<TId>`, a generic interface defining identity and audit timestamp contracts (`id`, `createdAt`, `updatedAt`) consumed by all `@teqbench` packages.
 
 ## Tech Stack
 
@@ -78,5 +76,3 @@ Follow **Conventional Commits** strictly:
 - Never delete branches.
 - Never modify CI workflow files without explicit instruction.
 - Never modify `release-please-config.json`, `.release-please-manifest.json`, or `CHANGELOG.md`.
-
-<!-- TODO: Add package-specific guidance below -->

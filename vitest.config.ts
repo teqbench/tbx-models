@@ -5,6 +5,10 @@ export default defineConfig({
         globals: true,
         passWithNoTests: false,
         coverage: {
+            exclude: [
+                // Interface-only — no runtime code to cover
+                'src/base-model.ts',
+            ],
             thresholds: {
                 lines: 80,
                 functions: 80,
