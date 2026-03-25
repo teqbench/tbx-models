@@ -1,7 +1,7 @@
 {
-  "name": "@teqbench/TODO-package-name",
-  "version": "0.6.1",
-  "description": "TODO: Package description",
+  "name": "@teqbench/tbx-models",
+  "version": "0.0.0",
+  "description": "TypeScript domain model interfaces for the TeqBench application framework. Provides BaseModel contracts consumed by all @teqbench packages.",
   "type": "module",
   "license": "Apache-2.0",
   "engines": {
