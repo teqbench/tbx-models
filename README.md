@@ -1,8 +1,8 @@
-# @teqbench/TODO-package-name
+# @teqbench/tbx-models
 
-![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/teqbench.dev.templates.tbx-package-main-build-status.json) ![Tests](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/teqbench.dev.templates.tbx-package-main-tests.json) ![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/teqbench.dev.templates.tbx-package-main-coverage.json) ![Version](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/teqbench.dev.templates.tbx-package-main-version.json) ![Build Number](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/teqbench.dev.templates.tbx-package-main-build-number.json)
+![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-build-status.json) ![Tests](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-tests.json) ![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-coverage.json) ![Version](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-version.json) ![Build Number](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-build-number.json)
 
-> TODO: Package description (1-2 sentences explaining what this package provides).
+> TypeScript domain model interfaces for the TeqBench application framework. Provides BaseModel contracts consumed by all @teqbench packages.
 
 ## Installation
 
@@ -15,19 +15,36 @@ echo "@teqbench:registry=https://npm.pkg.github.com" >> .npmrc
 Install the package:
 
 ```bash
-npm install @teqbench/TODO-package-name
+npm install @teqbench/tbx-models
 ```
 
 ## Usage
 
 ```typescript
-// TODO: Add usage example
-import {} from '@teqbench/TODO-package-name';
+import type { BaseModel } from '@teqbench/tbx-models';
+
+// Extend BaseModel for your domain entities
+interface User extends BaseModel {
+    email: string;
+}
+
+// Use a numeric identifier
+interface LegacyRecord extends BaseModel<number> {
+    label: string;
+}
 ```
 
 ## API Reference
 
-<!-- TODO: Document the public API -->
+### `BaseModel<TId = string>`
+
+Base interface for all TeqBench domain models. Every persistable entity extends this contract.
+
+| Property    | Type     | Description                              |
+| ----------- | -------- | ---------------------------------------- |
+| `id`        | `TId`    | Unique identifier (defaults to `string`) |
+| `createdAt` | `string` | ISO-8601 timestamp of record creation    |
+| `updatedAt` | `string` | ISO-8601 timestamp of last record update |
 
 ## Compatibility
 
