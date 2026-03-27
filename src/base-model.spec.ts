@@ -1,8 +1,8 @@
-import type { BaseModel } from './base-model';
+import type { TbxBaseModel } from './base-model';
 
-describe('BaseModel', () => {
+describe('TbxBaseModel', () => {
     it('should accept an object with string id by default', () => {
-        const model: BaseModel = {
+        const model: TbxBaseModel = {
             id: 'abc-123',
             createdAt: '2025-01-01T00:00:00.000Z',
             updatedAt: '2025-06-15T12:30:00.000Z',
@@ -14,7 +14,7 @@ describe('BaseModel', () => {
     });
 
     it('should accept a numeric id when parameterised with number', () => {
-        const model: BaseModel<number> = {
+        const model: TbxBaseModel<number> = {
             id: 42,
             createdAt: '2025-01-01T00:00:00.000Z',
             updatedAt: '2025-06-15T12:30:00.000Z',
@@ -24,7 +24,7 @@ describe('BaseModel', () => {
     });
 
     it('should enforce readonly on all properties', () => {
-        const model: BaseModel = {
+        const model: TbxBaseModel = {
             id: 'readonly-test',
             createdAt: '2025-01-01T00:00:00.000Z',
             updatedAt: '2025-01-01T00:00:00.000Z',
@@ -36,7 +36,7 @@ describe('BaseModel', () => {
     });
 
     it('should allow extension with additional properties', () => {
-        interface User extends BaseModel {
+        interface User extends TbxBaseModel {
             email: string;
         }
 
