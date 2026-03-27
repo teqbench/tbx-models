@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/teqbench/tbx-models/compare/v0.1.0...v1.0.0) (2026-03-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **models:** BaseModel is now exported as TbxBaseModel.
+
+### Code Refactoring
+
+* **models:** prefix public exports with Tbx per naming convention ([a630ec0](https://github.com/teqbench/tbx-models/commit/a630ec0d034f242a765683d51dd70a2132d637f7))
+
 ## 0.1.0 (2026-03-25)
 
 
