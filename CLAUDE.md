@@ -42,6 +42,61 @@ This package provides TypeScript domain model interfaces for the TeqBench applic
 - Coverage thresholds are enforced in CI: 80% lines/functions/statements, 75% branches, per file.
 - **Build tooling:** ng-packagr is used to build Angular Package Format (APF) output. It uses bundler module resolution internally, so source files use extensionless relative imports (e.g., `'./foo.service'`). The `ng-package.json` at the repo root configures the entry point and output directory. ng-packagr generates its own `package.json` inside `dist/` with the correct APF entry points (`fesm2022/`, etc.). The release workflow publishes from `dist/` directly (`npm publish ./dist`), so consumers resolve against ng-packagr's generated `package.json`. The root `package.json` does not need `main`, `types`, or `exports` fields.
 
+## TSDoc Convention
+
+All exported TypeScript declarations must have TSDoc comments validated by `eslint-plugin-tsdoc`. Custom tags are defined in `tsdoc.json` and consumed downstream by API Extractor and the AI HTML documentation generator.
+
+### Standard Tags (always use)
+
+- `@remarks` — Extended description, separated from the summary line.
+- `@typeParam` — Document generic type parameters (not `@template`).
+- `@param` — Document function/method parameters.
+- `@returns` — Document return values.
+- `@example` — Code examples in fenced TypeScript blocks.
+- `@packageDocumentation` — Required on every barrel file (`index.ts`) to describe the package entry point. Use `{@link ExportName}` to cross-reference primary exports.
+- `@public` / `@internal` — Release tag on every export. Use `@public` unless the export is not part of the package API surface.
+- `@see` — Reference to related external resources or docs.
+- `@deprecated` — Mark deprecated APIs with migration guidance.
+
+### Custom Tags
+
+- `@category` — Group exports by domain for navigation and table-of-contents generation (e.g., "Models", "Services", "Utilities", "Pipes", "Guards"). Repeatable — an export can belong to multiple categories (e.g., "Models", "Foundational", "Interface").
+- `@since` — The package version when the export was first introduced (e.g., "1.0.0"). Allows the docs generator to render version badges and filter by release.
+- `@related` — Cross-reference to a related export, optionally in another `@teqbench` package (e.g., "TbxAuthService" or "@teqbench/tbx-auth#TbxAuthService"). Repeatable — use one `@related` tag per reference.
+- `@usage` — Prose description of when and why to use this export, distinct from `@example` which shows code. Helps the AI generator produce contextual KB articles rather than raw API listings.
+- `@displayName` — Human-friendly label used as the heading in generated docs (e.g., "Base Model" for `TbxModel`). When omitted, the export name is used as-is.
+- `@order` — Numeric sort hint controlling display sequence within a `@category` on generated pages. Lower numbers appear first. When omitted, exports are sorted alphabetically.
+
+### Comment Structure
+
+````typescript
+/**
+ * Summary line — one sentence, no period.
+ *
+ * @remarks
+ * Extended description. Multiple paragraphs allowed.
+ *
+ * @typeParam T - Description of the generic parameter.
+ *
+ * @usage
+ * When and why to use this export.
+ *
+ * @example
+ * ```typescript
+ * // usage example
+ * ```
+ *
+ * @category Models
+ * @category Foundational
+ * @displayName Base Model
+ * @order 1
+ * @since 1.0.0
+ * @related OtherExport
+ *
+ * @public
+ */
+````
+
 ## Commit Convention
 
 Follow **Conventional Commits** strictly:
