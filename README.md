@@ -43,15 +43,15 @@ Base interface for all TeqBench domain models. Every persistable entity extends 
 | Property    | Type     | Description                              |
 | ----------- | -------- | ---------------------------------------- |
 | `id`        | `TId`    | Unique identifier (defaults to `string`) |
-| `createdAt` | `string` | ISO-8601 timestamp of record creation    |
-| `updatedAt` | `string` | ISO-8601 timestamp of last record update |
+| `createdAt` | `string` | [ISO 8601 ↗](https://www.iso.org/iso-8601-date-and-time-format.html) timestamp of record creation    |
+| `updatedAt` | `string` | [ISO 8601 ↗](https://www.iso.org/iso-8601-date-and-time-format.html) timestamp of last record update |
 
 ## Compatibility
 
 | Dependency | Version  |
 | ---------- | -------- |
-| TypeScript | ~5.9.0   |
-| Node.js    | >=24.0.0 |
+| [TypeScript ↗](https://www.typescriptlang.org/) | ~5.9.0   |
+| [Node.js ↗](https://nodejs.org/)                | >=24.0.0 |
 
 ## License
 

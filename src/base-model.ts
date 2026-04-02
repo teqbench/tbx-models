@@ -52,10 +52,12 @@ export interface TbxModel<TId = string> {
     readonly id: TId;
 
     /**
-     * ISO-8601 timestamp indicating when the record was created
+     * {@link https://www.iso.org/iso-8601-date-and-time-format.html | ISO 8601} timestamp indicating when the record was created
      *
      * @remarks
      * Set once at creation time and never modified thereafter.
+     *
+     * @see {@link https://www.iso.org/iso-8601-date-and-time-format.html | ISO 8601 Date and time format}
      *
      * @order 2
      *
@@ -64,10 +66,12 @@ export interface TbxModel<TId = string> {
     readonly createdAt: string;
 
     /**
-     * ISO-8601 timestamp indicating when the record was last updated
+     * {@link https://www.iso.org/iso-8601-date-and-time-format.html | ISO 8601} timestamp indicating when the record was last updated
      *
      * @remarks
      * Updated automatically whenever the record is persisted with changes.
+     *
+     * @see {@link https://www.iso.org/iso-8601-date-and-time-format.html | ISO 8601 Date and time format}
      *
      * @order 3
      *
