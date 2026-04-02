@@ -45,6 +45,8 @@ export interface TbxModel<TId = string> {
      * The concrete type is determined by the `TId` generic parameter.
      * When omitted, `TId` defaults to `string`.
      *
+     * @order 1
+     *
      * @public
      */
     readonly id: TId;
@@ -55,6 +57,8 @@ export interface TbxModel<TId = string> {
      * @remarks
      * Set once at creation time and never modified thereafter.
      *
+     * @order 2
+     *
      * @public
      */
     readonly createdAt: string;
@@ -64,6 +68,8 @@ export interface TbxModel<TId = string> {
      *
      * @remarks
      * Updated automatically whenever the record is persisted with changes.
+     *
+     * @order 3
      *
      * @public
      */

@@ -65,13 +65,38 @@ All exported TypeScript declarations must have TSDoc comments validated by `esli
 - `@related` — Cross-reference to a related export, optionally in another `@teqbench` package (e.g., "TbxAuthService" or "@teqbench/tbx-auth#TbxAuthService"). Repeatable — use one `@related` tag per reference.
 - `@usage` — Prose description of when and why to use this export, distinct from `@example` which shows code. Helps the AI generator produce contextual KB articles rather than raw API listings.
 - `@displayName` — Human-friendly label used as the heading in generated docs (e.g., "Base Model" for `TbxModel`). When omitted, the export name is used as-is.
-- `@order` — Numeric sort hint controlling display sequence within a `@category` on generated pages. Lower numbers appear first. When omitted, exports are sorted alphabetically.
+- `@order` — Numeric sort hint controlling display sequence. Applied at two levels:
+    - Top-level exports: controls display sequence within a `@category` on generated pages.
+    - Members (properties, methods): controls display sequence within the parent class/interface page. Members without `@order` are sorted by precedence group (see Member Ordering below), then alphabetically.
+
+### Member Ordering
+
+The documentation generator groups and sorts members within a class or interface page using the following precedence. Within each group, members are sorted by `@order` (lowest first), then alphabetically.
+
+1. Constructor(s)
+2. Identity properties (named `id` or with `@order` < 10)
+3. Required readonly properties
+4. Required mutable properties
+5. Optional properties
+6. Abstract methods
+7. Public methods
+8. Protected methods
+9. Static members
+10. Events / callbacks
+11. Deprecated members
+
+Add `@order` to any member where alphabetical sorting within its group produces the wrong result. Common cases:
+
+- `id` should appear before `createdAt` and `updatedAt` — give `id` `@order 1`.
+- Lifecycle-related properties should appear in logical sequence — use `@order` to enforce creation-before-update ordering.
 
 ### Comment Structure
 
+Top-level exports:
+
 ````typescript
 /**
- * Summary line — one sentence, no period.
+ * Summary line — one sentence, no period
  *
  * @remarks
  * Extended description. Multiple paragraphs allowed.
@@ -96,6 +121,21 @@ All exported TypeScript declarations must have TSDoc comments validated by `esli
  * @public
  */
 ````
+
+Members (properties, methods):
+
+```typescript
+/**
+ * Summary line — one sentence, no period
+ *
+ * @remarks
+ * Extended description if needed.
+ *
+ * @order 1
+ *
+ * @public
+ */
+```
 
 ## Commit Convention
 
