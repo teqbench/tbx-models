@@ -12,17 +12,17 @@
  * @example
  * ```typescript
  * // Default string identifier
- * interface User extends TbxBaseModel {
+ * interface User extends TbxModel {
  *     email: string;
  * }
  *
  * // Numeric identifier
- * interface LegacyRecord extends TbxBaseModel<number> {
+ * interface LegacyRecord extends TbxModel<number> {
  *     label: string;
  * }
  * ```
  */
-export interface TbxBaseModel<TId = string> {
+export interface TbxModel<TId = string> {
     /**
      * Unique identifier for the model instance.
      *

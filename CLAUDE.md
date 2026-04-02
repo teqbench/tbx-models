@@ -4,7 +4,7 @@ This file provides guidance for Claude Code when working in this repository.
 
 ## Package Overview
 
-This package provides TypeScript domain model interfaces for the TeqBench application framework. The primary export is `TbxBaseModel<TId>`, a generic interface defining identity and audit timestamp contracts (`id`, `createdAt`, `updatedAt`) consumed by all `@teqbench` packages.
+This package provides TypeScript domain model interfaces for the TeqBench application framework. The primary export is `TbxModel<TId>`, a generic interface defining identity and audit timestamp contracts (`id`, `createdAt`, `updatedAt`) consumed by all `@teqbench` packages.
 
 ## Tech Stack
 

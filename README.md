@@ -2,7 +2,7 @@
 
 ![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-build-status.json) ![Tests](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-tests.json) ![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-coverage.json) ![Version](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-version.json) ![Build Number](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-build-number.json)
 
-> TypeScript domain model interfaces for the TeqBench application framework. Provides TbxBaseModel contracts consumed by all @teqbench packages.
+> TypeScript domain model interfaces for the TeqBench application framework. Provides TbxModel contracts consumed by all @teqbench packages.
 
 ## Installation
 
@@ -21,22 +21,22 @@ npm install @teqbench/tbx-models
 ## Usage
 
 ```typescript
-import type { TbxBaseModel } from '@teqbench/tbx-models';
+import type { TbxModel } from '@teqbench/tbx-models';
 
-// Extend TbxBaseModel for your domain entities
-interface User extends TbxBaseModel {
+// Extend TbxModel for your domain entities
+interface User extends TbxModel {
     email: string;
 }
 
 // Use a numeric identifier
-interface LegacyRecord extends TbxBaseModel<number> {
+interface LegacyRecord extends TbxModel<number> {
     label: string;
 }
 ```
 
 ## API Reference
 
-### `TbxBaseModel<TId = string>`
+### `TbxModel<TId = string>`
 
 Base interface for all TeqBench domain models. Every persistable entity extends this contract.
 

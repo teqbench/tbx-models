@@ -1,1 +1,1 @@
-export type { TbxBaseModel } from './base-model';
+export type { TbxModel } from './base-model';
