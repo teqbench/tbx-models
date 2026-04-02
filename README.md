@@ -60,4 +60,4 @@ Base interface for all TeqBench domain models. Every persistable entity extends 
 
 ## License
 
-[Apache-2.0](LICENSE) — Copyright 2025 TeqBench
+[AGPL-3.0](LICENSE) — Copyright 2026 TeqBench
