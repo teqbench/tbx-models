@@ -57,8 +57,6 @@ export interface TbxModel<TId = string> {
      * @remarks
      * Set once at creation time and never modified thereafter.
      *
-     * @see {@link https://www.iso.org/iso-8601-date-and-time-format.html | ISO 8601 Date and time format}
-     *
      * @order 2
      *
      * @public
@@ -70,8 +68,6 @@ export interface TbxModel<TId = string> {
      *
      * @remarks
      * Updated automatically whenever the record is persisted with changes.
-     *
-     * @see {@link https://www.iso.org/iso-8601-date-and-time-format.html | ISO 8601 Date and time format}
      *
      * @order 3
      *
