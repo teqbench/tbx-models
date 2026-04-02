@@ -53,6 +53,11 @@ Base interface for all TeqBench domain models. Every persistable entity extends 
 | [TypeScript ↗](https://www.typescriptlang.org/) | ~5.9.0   |
 | [Node.js ↗](https://nodejs.org/)                | >=24.0.0 |
 
+## Feedback
+
+- [Report a bug ↗](https://github.com/teqbench/tbx-models/issues/new?template=bug_report.md)
+- [Request a feature ↗](https://github.com/teqbench/tbx-models/issues/new?template=feature_request.md)
+
 ## License
 
 [Apache-2.0](LICENSE) — Copyright 2025 TeqBench
