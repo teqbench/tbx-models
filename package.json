@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "TypeScript domain model interfaces for the TeqBench application framework. Provides TbxModel contracts consumed by all @teqbench packages.",
   "type": "module",
+  "keywords": [
+    "typescript"
+  ],
   "license": "Apache-2.0",
   "engines": {
     "node": ">=24.0.0"
