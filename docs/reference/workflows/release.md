@@ -7,7 +7,7 @@
 
 ## Purpose
 
-The Release workflow automates versioning, changelog generation, GitHub Release creation, and npm publishing using Google's [release-please](https://github.com/googleapis/release-please). It eliminates the need to manually edit version numbers, write changelogs, or create release tags. When a release is created, the package is automatically published to GitHub Packages.
+The Release workflow automates versioning, changelog generation, GitHub Release creation, and [npm ↗](https://www.npmjs.com/) publishing using Google's [release-please ↗](https://github.com/googleapis/release-please). It eliminates the need to manually edit version numbers, write changelogs, or create release tags. When a release is created, the package is automatically published to [GitHub Packages ↗](https://github.com/orgs/teqbench/packages).
 
 ---
 
@@ -103,10 +103,10 @@ permissions:
 1. **Checkout code** — Standard checkout (no full history needed).
 2. **Setup Node** — Configures Node from `.nvmrc` with `registry-url: "https://npm.pkg.github.com"` for GitHub Packages authentication.
 3. **Install dependencies** — `npm ci` for deterministic builds. `GITHUB_TOKEN` with `packages: write` handles publishing to the current repo's package, and `packages: read` (inherited) handles installing dependencies.
-4. **Build** — `npm run build` compiles TypeScript to `dist/`.
+4. **Build** — `npm run build` compiles [TypeScript ↗](https://www.typescriptlang.org/) to `dist/`.
 5. **Publish** — `npm publish ./dist` with `NODE_AUTH_TOKEN` set to `GITHUB_TOKEN`. Publishing from `dist/` directly means consumers resolve against ng-packagr's generated `package.json` with the correct APF entry points.
 
-> **Cross-repo `@teqbench` dependencies:** For packages that depend on other `@teqbench` packages, each dependency package must grant the consuming repository read access in its package settings (**GitHub Packages → Manage access**). This applies to the entire transitive dependency tree, not just direct dependencies — same as CI.
+> **Cross-repo `@teqbench` dependencies:** For packages that depend on other `@teqbench` packages, each dependency package must grant the consuming repository read access in its package settings (**[GitHub Packages ↗](https://github.com/orgs/teqbench/packages) → Manage access**). This applies to the entire transitive dependency tree, not just direct dependencies — same as CI.
 
 ---
 
@@ -114,7 +114,7 @@ permissions:
 
 ### Phase 1: Create/Update Release PR
 
-After a push to `main` that includes conventional commits (`feat:`, `fix:`), release-please:
+After a push to `main` that includes conventional commits (`feat:`, `fix:`), [release-please ↗](https://github.com/googleapis/release-please):
 
 1. Reads all conventional commits since the last release tag.
 2. Determines the version bump:
@@ -165,7 +165,7 @@ When the Release PR is merged:
 
 Key settings:
 
-- **`release-type: node`** — uses Node.js release strategy (reads `package.json`).
+- **`release-type: node`** — uses [Node.js ↗](https://nodejs.org/) release strategy (reads `package.json`).
 - **`extra-files`** — also bumps version in `package-lock.json` at two JSON paths.
 - **`include-component-in-tag: false`** — produces clean tags like `v0.1.1` instead of prefixed tags.
 - **`changelog-path`** — writes changelog to the repo root.
@@ -178,7 +178,7 @@ Key settings:
 }
 ```
 
-Tracks the current released version. Updated automatically by release-please. CI reads this file to generate the version badge.
+Tracks the current released version. Updated automatically by [release-please ↗](https://github.com/googleapis/release-please). CI reads this file to generate the version badge.
 
 ---
 

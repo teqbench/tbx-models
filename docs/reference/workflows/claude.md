@@ -158,7 +158,7 @@ Claude's capabilities are explicitly restricted via `--allowedTools` to prevent 
 | --------- | --------------------------------------- |
 | `npm run` | Run project scripts (test, lint, build) |
 | `npm ci`  | Install dependencies                    |
-| `npx`     | Run Node.js binaries                    |
+| `npx`     | Run [Node.js ↗](https://nodejs.org/) binaries                    |
 
 ---
 

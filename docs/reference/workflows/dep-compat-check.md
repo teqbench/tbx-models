@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Tracks pinned dependencies that are waiting for a new version — for example, waiting for a package to release a compatible major version before it can be adopted. The workflow checks the npm registry daily, evaluates resolution conditions, and posts status updates to a tracking issue.
+Tracks pinned dependencies that are waiting for a new version — for example, waiting for a package to release a compatible major version before it can be adopted. The workflow checks the [npm ↗](https://www.npmjs.com/) registry daily, evaluates resolution conditions, and posts status updates to a tracking issue.
 
 ---
 
