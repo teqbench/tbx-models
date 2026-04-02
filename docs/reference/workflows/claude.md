@@ -7,7 +7,7 @@
 
 ## Purpose
 
-The Claude Code workflow provides AI-powered assistance directly in GitHub issues and pull requests. When a user mentions `@claude` in a comment or issue body, Claude reads the codebase, analyzes the request, and can implement features, fix bugs, review code, or create pull requests — all within the GitHub UI.
+The [Claude Code ↗](https://github.com/anthropics/claude-code) workflow provides AI-powered assistance directly in GitHub issues and pull requests. When a user mentions `@claude` in a comment or issue body, Claude reads the codebase, analyzes the request, and can implement features, fix bugs, review code, or create pull requests — all within the GitHub UI.
 
 ---
 
@@ -50,13 +50,13 @@ jobs:
 
 ## Secrets Used
 
-| Secret              | Purpose                                  |
-| ------------------- | ---------------------------------------- |
-| `APP_ID`            | GitHub App ID for generating a bot token |
-| `APP_PRIVATE_KEY`   | GitHub App private key                   |
-| `ANTHROPIC_API_KEY` | Authenticates with the Anthropic API     |
+| Secret              | Purpose                                                               |
+| ------------------- | --------------------------------------------------------------------- |
+| `APP_ID`            | GitHub App ID for generating a bot token                              |
+| `APP_PRIVATE_KEY`   | GitHub App private key                                                |
+| `ANTHROPIC_API_KEY` | Authenticates with the [Anthropic API ↗](https://docs.anthropic.com/) |
 
-The app token is used for checkout with submodules (Claude Code skills) and for full repository access.
+The app token is used for checkout with submodules ([Claude Code ↗](https://github.com/anthropics/claude-code) skills) and for full repository access.
 
 ---
 
@@ -173,7 +173,7 @@ Claude reads the `CLAUDE.md` file in the repo root for project-specific context.
 - Branching rules and workflow expectations
 - Explicit do's and don'ts for Claude's behavior
 
-Both the GitHub Action and the Claude Code CLI read the same `CLAUDE.md`, ensuring consistent behavior across local and CI environments.
+Both the GitHub Action and the [Claude Code ↗](https://github.com/anthropics/claude-code) CLI read the same `CLAUDE.md`, ensuring consistent behavior across local and CI environments.
 
 ---
 
@@ -194,7 +194,7 @@ Claude will:
 2. Create a feature or bugfix branch off `dev`
 3. Implement the requested changes
 4. Run tests and lint to verify
-5. Commit with conventional commit messages
+5. Commit with [Conventional Commits ↗](https://www.conventionalcommits.org/) messages
 6. Push and create a PR targeting `dev`
 
 ---

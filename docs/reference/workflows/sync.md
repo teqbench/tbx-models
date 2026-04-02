@@ -113,7 +113,7 @@ git push origin dev
 
 ## Interaction with Other Workflows
 
-| What Happens                 | Result                                                                                                                                          |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sync pushes to `dev`         | CI on `dev` is **skipped** — the `[skip ci]` tag in the merge commit message suppresses the `push` trigger per the GitHub Actions specification |
-| Sync races with another push | Handled by `git pull --rebase` before pushing                                                                                                   |
+| What Happens                 | Result                                                                                                                                                                                  |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sync pushes to `dev`         | CI on `dev` is **skipped** — the `[skip ci]` tag in the merge commit message suppresses the `push` trigger per the [GitHub Actions ↗](https://docs.github.com/en/actions) specification |
+| Sync races with another push | Handled by `git pull --rebase` before pushing                                                                                                                                           |

@@ -93,7 +93,7 @@ Uses the app token when available. Falls back to `GITHUB_TOKEN` for [Dependabot 
 
 #### 4. Setup Node
 
-Reads the Node version from `.nvmrc` with npm cache enabled.
+Reads the [Node.js ↗](https://nodejs.org/) version from `.nvmrc` with [npm ↗](https://www.npmjs.com/) cache enabled.
 
 #### 5. Install Dependencies
 
@@ -101,9 +101,9 @@ Reads the Node version from `.nvmrc` with npm cache enabled.
 npm ci
 ```
 
-Clean install from `package-lock.json` for deterministic builds. `GITHUB_TOKEN` is used with `packages: read` permission (inherited from the job's `contents: read` scope) to authenticate with GitHub Packages.
+Clean install from `package-lock.json` for deterministic builds. `GITHUB_TOKEN` is used with `packages: read` permission (inherited from the job's `contents: read` scope) to authenticate with [GitHub Packages ↗](https://github.com/orgs/teqbench/packages).
 
-> **Cross-repo `@teqbench` dependencies:** For packages that depend on other `@teqbench` packages, each dependency package must grant the consuming repository read access in its package settings (**GitHub Packages → Manage access**). This applies to the entire transitive dependency tree, not just direct dependencies. Without this, `npm ci` will fail with `403 Forbidden`.
+> **Cross-repo `@teqbench` dependencies:** For packages that depend on other `@teqbench` packages, each dependency package must grant the consuming repository read access in its package settings (**[GitHub Packages ↗](https://github.com/orgs/teqbench/packages) → Manage access**). This applies to the entire transitive dependency tree, not just direct dependencies. Without this, `npm ci` will fail with `403 Forbidden`.
 
 #### 6. Audit Dependencies
 
@@ -171,7 +171,7 @@ Compiles [TypeScript ↗](https://www.typescriptlang.org/) to `dist/` using `tsc
 
 #### 14–18. Push Badge Data to Gist
 
-Five badges are pushed as JSON to a shared public [GitHub Gist ↗](https://gist.github.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4) using `schneegans/dynamic-badges-action@v1.7.0`. [Shields.io](https://shields.io) reads the JSON and renders the badges dynamically. Only runs on **push events** (not PRs).
+Five badges are pushed as JSON to a shared public [GitHub Gist ↗](https://gist.github.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4) using `schneegans/dynamic-badges-action@v1.7.0`. [Shields.io ↗](https://shields.io) reads the JSON and renders the badges dynamically. Only runs on **push events** (not PRs).
 
 | Badge        | Style         | Source                                            | Gist Filename                       |
 | ------------ | ------------- | ------------------------------------------------- | ----------------------------------- |
@@ -196,13 +196,13 @@ All badge steps run with `if: always()` so badges update even on failure. The `s
 
 ## Badge Rendering
 
-Badges are rendered by [Shields.io endpoint badges](https://shields.io/badges/endpoint-badge). The URL format is:
+Badges are rendered by [Shields.io endpoint badges ↗](https://shields.io/badges/endpoint-badge). The URL format is:
 
 ```
 https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/{GIST_OWNER}/{GIST_ID}/raw/{REPO_NAME}-{BRANCH}-{badge}.json
 ```
 
-The gist stores JSON files matching the [Shields.io endpoint schema](https://shields.io/badges/endpoint-badge):
+The gist stores JSON files matching the [Shields.io endpoint schema ↗](https://shields.io/badges/endpoint-badge):
 
 ```json
 {

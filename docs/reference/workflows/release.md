@@ -101,10 +101,10 @@ permissions:
 ### Steps
 
 1. **Checkout code** — Standard checkout (no full history needed).
-2. **Setup Node** — Configures Node from `.nvmrc` with `registry-url: "https://npm.pkg.github.com"` for GitHub Packages authentication.
+2. **Setup Node** — Configures [Node.js ↗](https://nodejs.org/) from `.nvmrc` with `registry-url: "https://npm.pkg.github.com"` for [GitHub Packages ↗](https://github.com/orgs/teqbench/packages) authentication.
 3. **Install dependencies** — `npm ci` for deterministic builds. `GITHUB_TOKEN` with `packages: write` handles publishing to the current repo's package, and `packages: read` (inherited) handles installing dependencies.
 4. **Build** — `npm run build` compiles [TypeScript ↗](https://www.typescriptlang.org/) to `dist/`.
-5. **Publish** — `npm publish ./dist` with `NODE_AUTH_TOKEN` set to `GITHUB_TOKEN`. Publishing from `dist/` directly means consumers resolve against ng-packagr's generated `package.json` with the correct APF entry points.
+5. **Publish** — `npm publish ./dist` with `NODE_AUTH_TOKEN` set to `GITHUB_TOKEN`. Publishing from `dist/` directly means consumers resolve against [ng-packagr ↗](https://github.com/ng-packagr/ng-packagr)'s generated `package.json` with the correct APF entry points.
 
 > **Cross-repo `@teqbench` dependencies:** For packages that depend on other `@teqbench` packages, each dependency package must grant the consuming repository read access in its package settings (**[GitHub Packages ↗](https://github.com/orgs/teqbench/packages) → Manage access**). This applies to the entire transitive dependency tree, not just direct dependencies — same as CI.
 
@@ -114,9 +114,9 @@ permissions:
 
 ### Phase 1: Create/Update Release PR
 
-After a push to `main` that includes conventional commits (`feat:`, `fix:`), [release-please ↗](https://github.com/googleapis/release-please):
+After a push to `main` that includes [Conventional Commits ↗](https://www.conventionalcommits.org/) (`feat:`, `fix:`), [release-please ↗](https://github.com/googleapis/release-please):
 
-1. Reads all conventional commits since the last release tag.
+1. Reads all [Conventional Commits ↗](https://www.conventionalcommits.org/) since the last release tag.
 2. Determines the version bump:
     - `fix(…):` — **patch** (e.g., 1.0.0 to 1.0.1)
     - `feat(…):` — **minor** (e.g., 1.0.0 to 1.1.0)
@@ -135,7 +135,7 @@ When the Release PR is merged:
 
 1. Creates a GitHub Release with auto-generated release notes.
 2. Creates a git tag (e.g., `v0.1.1`).
-3. The `publish` job runs — builds and publishes the package to GitHub Packages.
+3. The `publish` job runs — builds and publishes the package to [GitHub Packages ↗](https://github.com/orgs/teqbench/packages).
 4. The push to `main` from the merge triggers CI (to update badges) and Sync (to merge main into dev).
 
 ---

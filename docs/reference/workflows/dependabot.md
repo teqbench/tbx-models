@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Automatically opens pull requests to update dependencies on a weekly schedule. PRs target the `dev` branch (not `main`) and use conventional commit message prefixes so they integrate cleanly with the [release-please ↗](https://github.com/googleapis/release-please) workflow.
+Automatically opens pull requests to update dependencies on a weekly schedule. PRs target the `dev` branch (not `main`) and use [Conventional Commits ↗](https://www.conventionalcommits.org/) message prefixes so they integrate cleanly with the [release-please ↗](https://github.com/googleapis/release-please) workflow.
 
 ---
 
