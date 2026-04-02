@@ -7,7 +7,7 @@
 
 ## Purpose
 
-The CI workflow is the quality gate for the repository. It runs formatting checks, type checking, linting, tests with coverage enforcement, dependency auditing, and README version drift detection on every push and pull request to `main` and `dev`. After a successful push (not PR), it pushes badge data to a shared [GitHub Gist ↗](https://gist.github.com/) and updates the README with branch-specific [Shields.io ↗](https://shields.io) badge URLs.
+The CI workflow is the quality gate for the repository. It runs formatting checks, type checking, linting, tests with coverage enforcement, dependency auditing, and README version drift detection on every push and pull request to `main` and `dev`. After a successful push (not PR), it pushes badge data to a shared [GitHub Gist ↗](https://gist.github.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4) and updates the README with branch-specific [Shields.io ↗](https://shields.io) badge URLs.
 
 ---
 
@@ -171,7 +171,7 @@ Compiles [TypeScript ↗](https://www.typescriptlang.org/) to `dist/` using `tsc
 
 #### 14–18. Push Badge Data to Gist
 
-Five badges are pushed as JSON to a shared public [GitHub Gist ↗](https://gist.github.com/) using `schneegans/dynamic-badges-action@v1.7.0`. [Shields.io](https://shields.io) reads the JSON and renders the badges dynamically. Only runs on **push events** (not PRs).
+Five badges are pushed as JSON to a shared public [GitHub Gist ↗](https://gist.github.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4) using `schneegans/dynamic-badges-action@v1.7.0`. [Shields.io](https://shields.io) reads the JSON and renders the badges dynamically. Only runs on **push events** (not PRs).
 
 | Badge        | Style         | Source                                            | Gist Filename                       |
 | ------------ | ------------- | ------------------------------------------------- | ----------------------------------- |
