@@ -26,11 +26,11 @@ assignees: ''
 
 ## Environment
 
-| Item    | Value |
-| ------- | ----- |
-| Node.js |       |
-| npm     |       |
-| OS      |       |
+| Item                             | Value |
+| -------------------------------- | ----- |
+| [Node.js ↗](https://nodejs.org/) |       |
+| npm                              |       |
+| OS                               |       |
 
 ## Additional Context
 

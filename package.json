@@ -1,8 +1,11 @@
 {
   "name": "@teqbench/tbx-models",
   "version": "1.0.0",
-  "description": "TypeScript domain model interfaces for the TeqBench application framework. Provides TbxBaseModel contracts consumed by all @teqbench packages.",
+  "description": "TypeScript domain model interfaces for the TeqBench application framework. Provides TbxModel contracts consumed by all @teqbench packages.",
   "type": "module",
+  "keywords": [
+    "typescript"
+  ],
   "license": "AGPL-3.0-only",
   "engines": {
     "node": ">=24.0.0"
@@ -33,6 +36,7 @@
     "@types/node": "~24.12.0",
     "@vitest/coverage-v8": "^4.1.1",
     "eslint": "^9.39.2",
+    "eslint-plugin-tsdoc": "^0.5.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.3.3",
     "ng-packagr": "^21.2.1",
