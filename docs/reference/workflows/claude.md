@@ -1,6 +1,6 @@
 # Claude Code Workflow — `claude.yml`
 
-**Full name:** TeqBench Package - Claude Code Workflow
+**Full name:** TeqBench Package - [Claude Code ↗](https://github.com/anthropics/claude-code) Workflow
 **File:** `.github/workflows/claude.yml`
 
 ---

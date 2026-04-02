@@ -62,7 +62,7 @@ also-track: @angular/cli, @angular/compiler
 
 | Field         | Required | Description                                                       |
 | ------------- | -------- | ----------------------------------------------------------------- |
-| `package`     | Yes      | npm package name to check                                         |
+| `package`     | Yes      | [npm ↗](https://www.npmjs.com/) package name to check             |
 | `resolution`  | No       | Resolution condition (see below). Defaults to `manual`.           |
 | `description` | No       | Human-readable context for status reports                         |
 | `also-track`  | No       | Comma-separated list of additional packages to show in the report |

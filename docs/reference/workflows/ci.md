@@ -89,7 +89,7 @@ with:
     fetch-depth: 0
 ```
 
-Uses the app token when available. Falls back to `GITHUB_TOKEN` for [Dependabot ↗](https://github.com/dependabot) PRs. Submodules (Claude Code skills) are checked out for non-[Dependabot ↗](https://github.com/dependabot) runs. `fetch-depth: 0` fetches full history.
+Uses the app token when available. Falls back to `GITHUB_TOKEN` for [Dependabot ↗](https://github.com/dependabot) PRs. Submodules ([Claude Code ↗](https://github.com/anthropics/claude-code) skills) are checked out for non-[Dependabot ↗](https://github.com/dependabot) runs. `fetch-depth: 0` fetches full history.
 
 #### 4. Setup Node
 
