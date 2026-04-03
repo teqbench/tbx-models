@@ -1,4 +1,5 @@
 import tseslint from 'typescript-eslint';
+import tsdoc from 'eslint-plugin-tsdoc';
 
 export default tseslint.config(
     {
@@ -6,6 +7,7 @@ export default tseslint.config(
     },
     ...tseslint.configs.recommended,
     {
+        plugins: { tsdoc },
         languageOptions: {
             parserOptions: {
                 projectService: {
@@ -13,6 +15,9 @@ export default tseslint.config(
                 },
                 tsconfigRootDir: import.meta.dirname,
             },
+        },
+        rules: {
+            'tsdoc/syntax': 'warn',
         },
     }
 );
