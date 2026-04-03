@@ -165,7 +165,7 @@ summary line
 
 ### Reference Implementation
 
-`@teqbench/tbx-models` `src/base-model.ts` is the reference for a fully migrated [TSDoc ↗](https://tsdoc.org) comment on an interface with member-level docs including `@order` tags. `src/index.ts` in this same package is the reference for a `@packageDocumentation` barrel file [TSDoc ↗](https://tsdoc.org) comment.
+`@teqbench/tbx-models` `src/model.ts` is the reference for a fully migrated [TSDoc ↗](https://tsdoc.org) comment on an interface with member-level docs including `@order` tags. `src/index.ts` in this same package is the reference for a `@packageDocumentation` barrel file [TSDoc ↗](https://tsdoc.org) comment.
 
 ### Verification
 

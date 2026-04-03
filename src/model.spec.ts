@@ -1,4 +1,4 @@
-import type { TbxModel } from './base-model';
+import type { TbxModel } from './model';
 
 describe('TbxModel', () => {
     it('should accept an object with string id by default', () => {
