@@ -1,6 +1,6 @@
 {
   "name": "@teqbench/tbx-models",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "TypeScript domain model interfaces for the TeqBench application framework. Provides TbxModel contracts consumed by all @teqbench packages.",
   "type": "module",
   "keywords": [

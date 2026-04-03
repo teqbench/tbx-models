@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/teqbench/tbx-models/compare/v1.0.0...v2.0.0) (2026-04-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **models:** rename TbxBaseModel to TbxModel
+
+### Features
+
+* **docs:** add TSDoc convention with custom tags and eslint-plugin-tsdoc ([d956c0f](https://github.com/teqbench/tbx-models/commit/d956c0f59b63fe48ff34b5e7260f546fcfa24003))
+
+
+### Code Refactoring
+
+* **models:** rename TbxBaseModel to TbxModel ([38494a0](https://github.com/teqbench/tbx-models/commit/38494a078c42a3031d8e209ec35f9feb13486598))
+
 ## [1.0.0](https://github.com/teqbench/tbx-models/compare/v0.1.0...v1.0.0) (2026-03-27)
 
 
