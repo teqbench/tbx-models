@@ -30,7 +30,6 @@
  * ```
  *
  * @category Models
- * @category Foundational
  * @displayName Base Model
  * @order 1
  * @since 1.0.0
