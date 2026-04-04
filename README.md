@@ -2,7 +2,7 @@
 
 ![Build Status](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-build-status.json) ![Tests](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-tests.json) ![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-coverage.json) ![Version](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-version.json) ![Build Number](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/teqbench-shields-bot/a69600f4ed4ebed89ffb35d808e05eb4/raw/tbx-models-main-build-number.json)
 
-> [TypeScript ↗](https://www.typescriptlang.org/) domain model interfaces for the TeqBench application framework. Provides TbxModel contracts consumed by all @teqbench packages.
+> [TypeScript ↗](https://www.typescriptlang.org/) domain model interfaces for the TeqBench application framework. Provides TbxDomainEntityModel contracts consumed by all @teqbench packages.
 
 ## Installation
 
@@ -21,22 +21,22 @@ npm install @teqbench/tbx-models
 ## Usage
 
 ```typescript
-import type { TbxModel } from '@teqbench/tbx-models';
+import type { TbxDomainEntityModel } from '@teqbench/tbx-models';
 
-// Extend TbxModel for your domain entities
-interface User extends TbxModel {
+// Extend TbxDomainEntityModel for your domain entities
+interface User extends TbxDomainEntityModel {
     email: string;
 }
 
 // Use a numeric identifier
-interface LegacyRecord extends TbxModel<number> {
+interface LegacyRecord extends TbxDomainEntityModel<number> {
     label: string;
 }
 ```
 
 ## API Reference
 
-### `TbxModel<TId = string>`
+### `TbxDomainEntityModel<TId = string>`
 
 Base interface for all TeqBench domain models. Every persistable entity extends this contract.
 
