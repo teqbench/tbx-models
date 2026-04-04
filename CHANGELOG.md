@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/teqbench/tbx-models/compare/v2.0.0...v3.0.0) (2026-04-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **models:** the TbxModel export is removed; use TbxDomainEntityModel instead.
+
+### Code Refactoring
+
+* **models:** rename TbxModel to TbxDomainEntityModel and reorganize source layout ([d6bba09](https://github.com/teqbench/tbx-models/commit/d6bba09df86d0ebaec22a24ceb027e4f06e50e2e))
+
 ## [2.0.0](https://github.com/teqbench/tbx-models/compare/v1.0.0...v2.0.0) (2026-04-03)
 
 
