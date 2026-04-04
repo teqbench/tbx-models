@@ -1,8 +1,8 @@
-import type { TbxModel } from './model';
+import type { TbxDomainEntityModel } from './domain-entity.model';
 
-describe('TbxModel', () => {
+describe('TbxDomainEntityModel', () => {
     it('should accept an object with string id by default', () => {
-        const model: TbxModel = {
+        const model: TbxDomainEntityModel = {
             id: 'abc-123',
             createdAt: '2025-01-01T00:00:00.000Z',
             updatedAt: '2025-06-15T12:30:00.000Z',
@@ -14,7 +14,7 @@ describe('TbxModel', () => {
     });
 
     it('should accept a numeric id when parameterised with number', () => {
-        const model: TbxModel<number> = {
+        const model: TbxDomainEntityModel<number> = {
             id: 42,
             createdAt: '2025-01-01T00:00:00.000Z',
             updatedAt: '2025-06-15T12:30:00.000Z',
@@ -24,7 +24,7 @@ describe('TbxModel', () => {
     });
 
     it('should enforce readonly on all properties', () => {
-        const model: TbxModel = {
+        const model: TbxDomainEntityModel = {
             id: 'readonly-test',
             createdAt: '2025-01-01T00:00:00.000Z',
             updatedAt: '2025-01-01T00:00:00.000Z',
@@ -36,7 +36,7 @@ describe('TbxModel', () => {
     });
 
     it('should allow extension with additional properties', () => {
-        interface User extends TbxModel {
+        interface User extends TbxDomainEntityModel {
             email: string;
         }
 
