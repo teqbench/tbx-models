@@ -11,4 +11,4 @@
  *
  * @packageDocumentation
  */
-export type { TbxModel } from './model';
+export type { TbxModel } from './contracts/model';
