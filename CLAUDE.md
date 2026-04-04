@@ -4,7 +4,7 @@ This file provides guidance for Claude Code when working in this repository.
 
 ## Package Overview
 
-This package provides [TypeScript ↗](https://www.typescriptlang.org) domain model interfaces for the TeqBench application framework. The primary export is `TbxModel<TId>`, a generic interface defining identity and audit timestamp contracts (`id`, `createdAt`, `updatedAt`) consumed by all `@teqbench` packages.
+This package provides [TypeScript ↗](https://www.typescriptlang.org) domain model interfaces for the TeqBench application framework. The primary export is `TbxDomainEntityModel<TId>`, a generic interface defining identity and audit timestamp contracts (`id`, `createdAt`, `updatedAt`) consumed by all `@teqbench` packages.
 
 ## Tech Stack
 
@@ -64,7 +64,7 @@ All exported [TypeScript ↗](https://www.typescriptlang.org) declarations must 
 - `@since` — The package version when the export was first introduced (e.g., "1.0.0"). Allows the docs generator to render version badges and filter by release.
 - `@related` — Cross-reference to a related export, optionally in another `@teqbench` package (e.g., "TbxAuthService" or "@teqbench/tbx-auth#TbxAuthService"). Repeatable — use one `@related` tag per reference.
 - `@usage` — Prose description of when and why to use this export, distinct from `@example` which shows code. Helps the AI generator produce contextual KB articles rather than raw API listings.
-- `@displayName` — Human-friendly label used as the heading in generated docs (e.g., "Base Model" for `TbxModel`). When omitted, the export name is used as-is.
+- `@displayName` — Human-friendly label used as the heading in generated docs (e.g., "Base Model" for `TbxDomainEntityModel`). When omitted, the export name is used as-is.
 - `@order` — Numeric sort hint controlling display sequence. Applied at two levels:
     - Top-level exports: controls display sequence within a `@category` on generated pages.
     - Members (properties, methods): controls display sequence within the parent class/interface page. Members without `@order` are sorted by precedence group (see Member Ordering below), then alphabetically.
@@ -165,7 +165,7 @@ summary line
 
 ### Reference Implementation
 
-`@teqbench/tbx-models` `src/model.ts` is the reference for a fully migrated [TSDoc ↗](https://tsdoc.org) comment on an interface with member-level docs including `@order` tags. `src/index.ts` in this same package is the reference for a `@packageDocumentation` barrel file [TSDoc ↗](https://tsdoc.org) comment.
+`@teqbench/tbx-models` `src/models/domain-entity.model.ts` is the reference for a fully migrated [TSDoc ↗](https://tsdoc.org) comment on an interface with member-level docs including `@order` tags. `src/index.ts` in this same package is the reference for a `@packageDocumentation` barrel file [TSDoc ↗](https://tsdoc.org) comment.
 
 ### Verification
 
