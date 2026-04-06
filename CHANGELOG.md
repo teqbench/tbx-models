@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.2](https://github.com/teqbench/tbx-models/compare/v3.0.1...v3.0.2) (2026-04-06)
+
+
+### Bug Fixes
+
+* **deps:** update vite to 8.0.5 via vitest 4.1.2 to resolve CVEs ([1db3917](https://github.com/teqbench/tbx-models/commit/1db391702487d62b05487a24fefd0f47209e702e))
+* **deps:** update vite to 8.0.5 via vitest 4.1.2 to resolve CVEs ([100d8ca](https://github.com/teqbench/tbx-models/commit/100d8cae80567ed267edfff27b0a67b539510f08))
+
 ## [3.0.1](https://github.com/teqbench/tbx-models/compare/v3.0.0...v3.0.1) (2026-04-06)
 
 
