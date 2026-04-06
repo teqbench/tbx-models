@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.1](https://github.com/teqbench/tbx-models/compare/v3.0.0...v3.0.1) (2026-04-06)
+
+
+### Bug Fixes
+
+* **deps:** trigger release for coordinated dependency updates ([6088307](https://github.com/teqbench/tbx-models/commit/6088307c2989443873de83aecc68510935d53ce7))
+* **deps:** trigger release for coordinated dependency updates ([f88ac3f](https://github.com/teqbench/tbx-models/commit/f88ac3fbec3389cdb59c7e69d9067631706b4f22))
+
 ## [3.0.0](https://github.com/teqbench/tbx-models/compare/v2.0.0...v3.0.0) (2026-04-04)
 
 
