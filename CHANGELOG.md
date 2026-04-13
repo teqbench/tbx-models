@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.0](https://github.com/teqbench/tbx-models/compare/v3.0.2...v3.1.0) (2026-04-13)
+
+
+### Features
+
+* **docs:** overhaul README and adopt the per-package docs pipeline ([d740c79](https://github.com/teqbench/tbx-models/commit/d740c799cd8759dbd106564425510883f17c242f))
+* **docs:** overhaul README and adopt the per-package docs pipeline ([c5ecfe7](https://github.com/teqbench/tbx-models/commit/c5ecfe78a64b05b80045fe860227adc76db90f03))
+
 ## [3.0.2](https://github.com/teqbench/tbx-models/compare/v3.0.1...v3.0.2) (2026-04-06)
 
 
