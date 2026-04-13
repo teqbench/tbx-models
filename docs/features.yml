@@ -1,0 +1,16 @@
+# Short, scannable feature bullets rendered in the README "At a glance" section.
+# Each entry: one short noun phrase, one-line explanation.
+- name: Single foundational contract
+  summary: One generic interface, TbxDomainEntityModel, shared by every persistable entity across all @teqbench packages.
+- name: Generic identifier type
+  summary: Parameterized TId (defaults to string) so consumers can use UUIDs, auto-increment numbers, or branded types without forking the interface.
+- name: ISO 8601 audit timestamps
+  summary: createdAt and updatedAt are ISO 8601 strings that serialize transparently to JSON without timezone ambiguity.
+- name: Types-only, zero runtime
+  summary: Compiled-away TypeScript interfaces — no JavaScript at runtime, no bundle-size cost, no dependencies.
+- name: Read-only identity
+  summary: The id property is declared readonly so consumers can't accidentally mutate identity after creation.
+- name: Strict minimum
+  summary: Exactly three required properties — intentionally conservative so the contract stays stable across releases.
+- name: Framework-wide consistency
+  summary: Every @teqbench package that models a persistable entity extends this same contract; no per-package drift.
