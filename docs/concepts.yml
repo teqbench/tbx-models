@@ -1,0 +1,13 @@
+# Glossary rendered in the README "Concepts" section. Term -> one-line definition.
+- term: Domain entity
+  definition: A persistable object in the application's problem domain that is identified by a stable id and tracked by audit timestamps.
+- term: Identifier type (TId)
+  definition: The generic parameter of TbxDomainEntityModel that lets consumers choose the identifier strategy — string (default), number, branded type, etc.
+- term: Audit timestamp
+  definition: The createdAt / updatedAt pair carrying ISO 8601 datetimes that record when the entity was created and last modified.
+- term: ISO 8601
+  definition: The international standard for date and time representation (e.g. 2026-04-12T19:30:00Z) used as the wire format for audit timestamps.
+- term: Branded type
+  definition: A nominal-typing TypeScript pattern that prevents accidental mixing of identifiers from different domains at compile time, typically by intersecting a primitive type with a unique tag.
+- term: Persistable entity
+  definition: An object the application stores and reads back by id — contrasted with transient input shapes or value objects, which should not extend this contract.
