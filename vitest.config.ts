@@ -5,10 +5,9 @@ export default defineConfig({
         globals: true,
         passWithNoTests: false,
         coverage: {
-            exclude: [
-                // Interface-only — no runtime code to cover
-                'src/base-model.ts',
-            ],
+            // No exclusions: every source file should contribute to coverage.
+            // Interface-only files compile to zero runtime code, so V8 has
+            // nothing to miss and they do not need to be excluded explicitly.
             thresholds: {
                 lines: 80,
                 functions: 80,
