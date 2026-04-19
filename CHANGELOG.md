@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.2.0](https://github.com/teqbench/tbx-models/compare/v3.1.0...v3.2.0) (2026-04-19)
+
+
+### Features
+
+* **community:** adopt org-default community health files ([ad2b2a6](https://github.com/teqbench/tbx-models/commit/ad2b2a65f5da8a2f72294fa2d0f1517106f33316))
+* **community:** adopt org-default community health files ([796978a](https://github.com/teqbench/tbx-models/commit/796978ab1f0ce9f2fdf371bef3eba1c999589d57))
+
+
+### Bug Fixes
+
+* **security:** correct public-repo vulnerability reporting channel ([114d52a](https://github.com/teqbench/tbx-models/commit/114d52aa5475e02207fb9f0bfe7af85874595f17)), closes [#52](https://github.com/teqbench/tbx-models/issues/52)
+
 ## [3.1.0](https://github.com/teqbench/tbx-models/compare/v3.0.2...v3.1.0) (2026-04-13)
 
 
