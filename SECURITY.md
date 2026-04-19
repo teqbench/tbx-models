@@ -13,7 +13,7 @@ The latest version on `main` is the only supported version.
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-To report a vulnerability, email [info@teqbench.dev](mailto:info@teqbench.dev) with the details. This keeps the report private until a fix is available.
+To report a vulnerability, use [GitHub Private vulnerability reporting ↗](https://github.com/teqbench/tbx-models/security/advisories/new). This keeps the report private until a fix is available.
 
 Include as much of the following as possible:
 
