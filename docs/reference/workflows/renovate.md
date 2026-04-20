@@ -60,6 +60,18 @@ Ungrouped packages (e.g., `@types/node`) get individual PRs.
 
 ---
 
+## SHA Digest Pinning
+
+[GitHub Actions ↗](https://docs.github.com/en/actions) references — including reusable workflow calls like `uses: teqbench/.github/.github/workflows/ci.yml@<sha>` — are pinned to full commit SHAs. The central `renovate-config.js` sets `pinDigests: true` on the `github-actions` rule, so [Renovate ↗](https://docs.renovatebot.com/) adds the SHA on first scan and keeps it current as the referenced tag moves.
+
+Pinning to a full SHA is a supply-chain hardening: a compromised tag cannot silently redirect the workflow to malicious code between scheduled Renovate runs. The `# <tag>` comment after the SHA is preserved by [Renovate ↗](https://docs.renovatebot.com/) for human readability. The format in every workflow file is:
+
+```yaml
+uses: teqbench/.github/.github/workflows/ci.yml@7de482dbdfad13f3ca7ba3f9be3111d69881c56a # main
+```
+
+---
+
 ## Auto-Merge
 
 Internal `@teqbench/*` packages are configured with `automerge: true` and `automergeType: "pr"`. When CI passes, Renovate merges the PR automatically — no human review required for internal version bumps.
