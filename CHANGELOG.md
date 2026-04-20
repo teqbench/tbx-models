@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.2.1](https://github.com/teqbench/tbx-models/compare/v3.2.0...v3.2.1) (2026-04-20)
+
+
+### Bug Fixes
+
+* **docs:** address findings from post-3.2.0 code review ([e61dab0](https://github.com/teqbench/tbx-models/commit/e61dab0de7201494118cf3db8765c46ba4e9634d))
+* **docs:** repair README links to community health files ([0e2cf62](https://github.com/teqbench/tbx-models/commit/0e2cf628bfd3a4d58d704a43d94f70100e37fa41))
+
 ## [3.2.0](https://github.com/teqbench/tbx-models/compare/v3.1.0...v3.2.0) (2026-04-19)
 
 
