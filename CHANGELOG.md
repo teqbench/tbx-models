@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.2.2](https://github.com/teqbench/tbx-models/compare/v3.2.1...v3.2.2) (2026-04-21)
+
+
+### Bug Fixes
+
+* **build:** include CHANGELOG.md in published tarball ([3e466ac](https://github.com/teqbench/tbx-models/commit/3e466ac899f2b55f2c66f7da5d8d0ef485f36180))
+* **build:** include CHANGELOG.md in published tarball ([4e6a2fa](https://github.com/teqbench/tbx-models/commit/4e6a2fade3b05ac1fcc9c820ea321a3404ff7026))
+
 ## [3.2.1](https://github.com/teqbench/tbx-models/compare/v3.2.0...v3.2.1) (2026-04-20)
 
 
