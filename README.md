@@ -166,12 +166,12 @@ Not applicable — types-only package, no UI surface.
 
 ## Compatibility
 
-<dl>
-    <dt><a href="https://www.typescriptlang.org/">TypeScript ↗</a></dt>
-    <dd>~5.9.0</dd>
-    <dt><a href="https://nodejs.org/">Node.js ↗</a></dt>
-    <dd>>=24.0.0</dd>
-</dl>
+<!-- Kept as a pipe table until teqbench/.github#22 lands; the centralized CI README version-check regex extracts versions from this exact shape. -->
+
+| Dependency                                      | Version  |
+| ----------------------------------------------- | -------- |
+| [TypeScript ↗](https://www.typescriptlang.org/) | ~5.9.0   |
+| [Node.js ↗](https://nodejs.org/)                | >=24.0.0 |
 
 ## Versioning & releases
 
