@@ -151,17 +151,22 @@ type CreateUserInput = Omit<User, 'id' | 'createdAt' | 'updatedAt'>;
 
 Base interface for all TeqBench domain models. Every persistable entity extends this contract.
 
-| Property    | Type     | Description                                                                                                                  |
-| ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `id`        | `TId`    | Unique identifier. Readonly — set once at creation and never reassigned. Defaults to `string` when `TId` is omitted.         |
-| `createdAt` | `string` | [ISO 8601 ↗](https://www.iso.org/iso-8601-date-and-time-format.html) timestamp indicating when the record was created.       |
-| `updatedAt` | `string` | [ISO 8601 ↗](https://www.iso.org/iso-8601-date-and-time-format.html) timestamp indicating when the record was last modified. |
+<dl>
+    <dt><code>id</code> (<code>TId</code>)</dt>
+    <dd>Unique identifier. Readonly — set once at creation and never reassigned. Defaults to <code>string</code> when <code>TId</code> is omitted.</dd>
+    <dt><code>createdAt</code> (<code>string</code>)</dt>
+    <dd><a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 ↗</a> timestamp indicating when the record was created.</dd>
+    <dt><code>updatedAt</code> (<code>string</code>)</dt>
+    <dd><a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 ↗</a> timestamp indicating when the record was last modified.</dd>
+</dl>
 
 ## Accessibility
 
 Not applicable — types-only package, no UI surface.
 
 ## Compatibility
+
+<!-- Kept as a pipe table until teqbench/.github#22 lands; the centralized CI README version-check regex extracts versions from this exact shape. -->
 
 | Dependency                                      | Version  |
 | ----------------------------------------------- | -------- |
