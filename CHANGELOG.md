@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.3](https://github.com/teqbench/tbx-models/compare/v3.2.2...v3.2.3) (2026-05-04)
+
+
+### Reverts
+
+* **readme:** keep Compatibility as pipe table for CI version-check ([0592314](https://github.com/teqbench/tbx-models/commit/05923145a2499305fdc7ec4c00eb19072748ad84))
+
 ## [3.2.2](https://github.com/teqbench/tbx-models/compare/v3.2.1...v3.2.2) (2026-04-21)
 
 
