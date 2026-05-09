@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.4](https://github.com/teqbench/tbx-models/compare/v3.2.3...v3.2.4) (2026-05-09)
+
+
+### Bug Fixes
+
+* **ci:** pin reusable workflows to [@v2](https://github.com/v2).6.0 ([6d45616](https://github.com/teqbench/tbx-models/commit/6d456165fffbdc77d7bc2fc4dadde72d5cba1bad))
+
 ## [3.2.3](https://github.com/teqbench/tbx-models/compare/v3.2.2...v3.2.3) (2026-05-04)
 
 
