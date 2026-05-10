@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.2.6](https://github.com/teqbench/tbx-models/compare/v3.2.5...v3.2.6) (2026-05-10)
+
+
+### Bug Fixes
+
+* **changelog:** strip broken at-mention autolinks from history ([fb4f6d2](https://github.com/teqbench/tbx-models/commit/fb4f6d24b5764a74c8734abded9f771dcae19477))
+* **changelog:** strip broken at-mention autolinks from history ([6f2a77f](https://github.com/teqbench/tbx-models/commit/6f2a77f5e0793872f2e5e68f4a708054c5f57a9a))
+
 ## [3.2.5](https://github.com/teqbench/tbx-models/compare/v3.2.4...v3.2.5) (2026-05-10)
 
 
