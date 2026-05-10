@@ -5,14 +5,14 @@
 
 ### Bug Fixes
 
-* **ci:** pin reusable workflows to [@v2](https://github.com/v2).9.3 ([90390e3](https://github.com/teqbench/tbx-models/commit/90390e3f6779d27456f9fc4c53b409f6efedd790)), closes [#28](https://github.com/teqbench/tbx-models/issues/28)
+* **ci:** pin reusable workflows to v2.9.3 ([90390e3](https://github.com/teqbench/tbx-models/commit/90390e3f6779d27456f9fc4c53b409f6efedd790)), closes [#28](https://github.com/teqbench/tbx-models/issues/28)
 
 ## [3.2.4](https://github.com/teqbench/tbx-models/compare/v3.2.3...v3.2.4) (2026-05-09)
 
 
 ### Bug Fixes
 
-* **ci:** pin reusable workflows to [@v2](https://github.com/v2).6.0 ([6d45616](https://github.com/teqbench/tbx-models/commit/6d456165fffbdc77d7bc2fc4dadde72d5cba1bad))
+* **ci:** pin reusable workflows to v2.6.0 ([6d45616](https://github.com/teqbench/tbx-models/commit/6d456165fffbdc77d7bc2fc4dadde72d5cba1bad))
 
 ## [3.2.3](https://github.com/teqbench/tbx-models/compare/v3.2.2...v3.2.3) (2026-05-04)
 
