@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "~24.13.0",
-    "@vitest/coverage-v8": "^4.1.1",
+    "@vitest/coverage-v8": "^5.0.0",
     "eslint": "^9.39.2",
     "eslint-plugin-tsdoc": "^0.5.2",
     "husky": "^9.1.7",
